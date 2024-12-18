@@ -6,8 +6,8 @@
       login_host: mysql.akhilasudhir.site
       # ansible_python_interpreter: /usr/bin/python3.9
   tasks:
-   - name: install python3.9 server
-     ansible.builtin.package:
+  - name: install python3.9 server
+    ansible.builtin.package:
       name: python3.9-pip
       state: present
   - name: ansible to install pymysql
