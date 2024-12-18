@@ -15,7 +15,8 @@
   - name: ansible to install pymysql
     ansible.builtin.pip:
         name:
-        - python 3.9 
+        - python3.9-pip 
+        - python3.9-venv
         - pip
         - PyMySQL
         - cryptography
