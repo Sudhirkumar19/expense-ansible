@@ -4,19 +4,20 @@
   vars:
       mysql_root_password: ExpenseApp@1
       login_host: mysql.akhilasudhir.site
-      ansible_python_interpreter: /usr/bin/python3.9
+      # ansible_python_interpreter: /usr/bin/python3.9
   tasks:
-  - name: to install python 3.9
-    ansible.builtin.package:
-        name:
-        - python 3.9
-        state: present
-    when: ansible_python_interpreter is defined
+  # - name: to install python 3.9
+  #   ansible.builtin.package:
+  #       name:
+  #       - python 3.9
+  #       state: present
+  #   when: ansible_python_interpreter is defined
   - name: ansible to install pymysql
     ansible.builtin.pip:
         name: 
-        - PyMySQL
         - pip
+        - PyMySQL
+        
         executable: 3.9
   - name: install MYSQL server
     ansible.builtin.package:
