@@ -5,6 +5,11 @@
       mysql_root_password: ExpenseApp@1
       login_host: mysql.akhilasudhir.site
   tasks:
+  - name: to install python 3.9
+    ansible.builtin.package:
+        name:
+        - python 3.9
+        state: present
   - name: ansible to install pymysql
     ansible.builtin.pip:
         name: 
