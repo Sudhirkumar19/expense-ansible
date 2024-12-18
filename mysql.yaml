@@ -14,7 +14,8 @@
   #   when: ansible_python_interpreter is defined
   - name: ansible to install pymysql
     ansible.builtin.pip:
-        name: 
+        name:
+        - python3.9 
         - pip
         - PyMySQL
         - cryptography
