@@ -6,17 +6,13 @@
       login_host: mysql.akhilasudhir.site
       # ansible_python_interpreter: /usr/bin/python3.9
   tasks:
-  # - name: to install python 3.9
-  #   ansible.builtin.package:
-  #       name:
-  #       - python 3.9
-  #       state: present
-  #   when: ansible_python_interpreter is defined
+   - name: install python3.9 server
+     ansible.builtin.package:
+      name: python3.9-pip
+      state: present
   - name: ansible to install pymysql
     ansible.builtin.pip:
         name:
-        - python3.9-pip 
-        - python3.9-venv
         - pip
         - PyMySQL
         - cryptography
